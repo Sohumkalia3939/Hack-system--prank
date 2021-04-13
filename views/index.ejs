@@ -1,44 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
-    <body>
-        <nav class="navbar navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+
+    <style>
+        body {
+  background: dodgerblue linear-gradient(45deg, aqua, dodgerblue, deeppink) fixed;
+	color: white;
+  font: normal 32px/1.6 system-ui, sans-serif;
+	text-shadow: 0 1px 1px hsl(0 0% 0% / 20%);
+  margin: 3rem;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+        .Wall{
+margin: auto;
+width: 50%;
+  border: 3px solid #73AD21;
+  padding: 200px;
+          }
+
+
+          input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+    </style>
+
+    <meta http-equiv="refresh" content="192">
+
+</head>
+<body>
+<div class="Wall">
+    <label for="fname">Add Money</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your Money..">
+    <input type="submit" value="Add Money" onclick="getVal();">
+
+    <h1 id="sohum">Balance:</h1>
+</div>
+<script>
+        function getVal()
+            {
+             var txt = document.getElementById('fname').value;
+          document.getElementById("sohum").innerHTML="Balance:"+txt+"-Rs";
           
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-            </div>
-          </nav>
-    </body>
-    </html>
+
+          if (txt > 50000){
+          var limit="Limit is 50000 rs only";
+          document.getElementById("sohum").innerHTML=limit;
+
+        }else{
+          document.getElementById("sohum").innerHTML="Balance:"+txt+"-Rs";
+        }
+
+        }
+      
+</script>
+</body>
 </html>

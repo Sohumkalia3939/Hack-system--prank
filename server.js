@@ -15,3 +15,9 @@ app.listen(port);
 app.get('/', function (req, res) {
     res.render('index');
 });
+app.get('/doing',function (req, res) {
+    res.render('doing');
+})
+app.get('/jokes',function (req, res) {
+    res.render('jokes');
+})

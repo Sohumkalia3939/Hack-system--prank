@@ -51,29 +51,16 @@ input[type=submit]:hover {
 </head>
 <body>
 <div class="Wall">
-    <label for="fname">Add Money</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your Money..">
-    <input type="submit" value="Add Money" onclick="getVal();">
+<h1 style="text-align:center;">Hack Any system</h1>
+  <input type="text" id="fname" name="firstname" placeholder="Enter Name of his operating system">
+    <input type="submit" value="Start Attack" onclick="fun()">
 
-    <h1 id="sohum">Balance:</h1>
+    <!--<h1 id="sohum">Balance:</h1>-->
 </div>
-<script>
-        function getVal()
-            {
-             var txt = document.getElementById('fname').value;
-          document.getElementById("sohum").innerHTML="Balance:"+txt+"-Rs";
-          
-
-          if (txt > 50000){
-          var limit="Limit is 50000 rs only";
-          document.getElementById("sohum").innerHTML=limit;
-
-        }else{
-          document.getElementById("sohum").innerHTML="Balance:"+txt+"-Rs";
-        }
-
-        }
-      
-</script>
+       <script>
+       function fun(){
+         window.open("doing")
+       }
+       </script>
 </body>
 </html>

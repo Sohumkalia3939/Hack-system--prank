@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .w3li {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+        </style>
+        </head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+    <center>
+  <h2>Start Hacking attack</h2>
+    </center>
+
+  <div class="w3-light-grey">
+    <div id="myBar" class="w3-green" style="height:24px;width:0 ;"></div>
+  </div>
+  <br>
+<center>
+  <button class="w3-button w3-green" onclick="move()">START ATTACK</button> 
+</center>
+</div>
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 2000);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      window.open("jokes")
+
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+
+    }
+  }
+}
+</script>
+
+</body>
+</html> 
